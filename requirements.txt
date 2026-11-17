@@ -1,7 +1,6 @@
-pandas
 numpy
+pandas
 scikit-learn
-xgboost
 scipy
-statsmodels
 joblib
+pytest

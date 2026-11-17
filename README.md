@@ -1,5 +1,7 @@
 # SATRIA DATA 2026 — National Data Science & Statistics Competition
 
+![ci](https://github.com/henryferdianto/satria-data-2026/actions/workflows/ci.yml/badge.svg)
+
 > **Best Regional Performance (Lampung Region) — Kemendikbudristek**
 
 ## Overview
@@ -47,12 +49,32 @@ python src/model.py --train data/processed/train.csv
 python src/evaluate.py --pred reports/predictions.csv
 ```
 
+
+<!-- completed -->
+
+## Quickstart with Sample Data
+
+The repository ships a synthetic data generator so the full pipeline can be run
+without any private dataset:
+
+```bash
+make sample && python -m src.model --train data/raw/train.csv
+python -m src.run_demo
+```
+
+## Tests
+
+```bash
+pip install -r requirements.txt
+pytest -q
+```
+
 ## Project Status
 
-This repository contains the project documentation and a runnable implementation
-skeleton. Scripts are structured so that each pipeline stage can be executed and
-extended independently. Update the configuration and data paths to run against
-your own datasets.
+This repository contains the project documentation and a runnable reference
+implementation. A synthetic data generator is included so every pipeline stage
+can be executed end-to-end; replace the sample data with your own datasets in
+`data/raw/` to reproduce real results.
 
 ## License
 
